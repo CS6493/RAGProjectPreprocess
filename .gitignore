@@ -1,2 +1,4 @@
 .vscode
+
+rag_datasets_local
 hotpotqa_faiss_index
