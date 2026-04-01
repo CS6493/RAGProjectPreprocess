@@ -1,0 +1,23 @@
+RAGProjectPreprocess/
+├── preprocessing_3datasets.py        #预处理代码
+├── retrieval_interface.py            #检索环节调用代码
+├──preprocessing_final_3datasets/
+     ├── dataset_statistics/          # 数据集统计报告
+     │   ├── hotpotqa_initial_statistics.json
+     │   ├── pubmedqa_initial_statistics.json
+     │   └── financebench_initial_statistics.json
+     ├── cleaning_reports/             # 数据清洗报告
+     │   ├── hotpotqa_cleaning_report.json
+     │   ├── pubmedqa_cleaning_report.json
+     │   └── financebench_cleaning_report.json
+     ├── chunking_results/             # 多参数分块结果
+     │   ├── chunking_parameter_comparison.json
+     │   ├── chunks_256_25.json
+     │   ├── chunks_512_51.json
+     │   └── ... (其他参数组合)
+     └── indexes/                      # 检索索引（核心交付物）
+         ├── bm25_index_final.pkl      # BM25稀疏索引
+         ├── dense_retrieval_index_final.faiss  # Contriever稠密索引
+         ├── chunk_metadata_final.pkl   # 分块元数据
+         └── final_chunks.json          # 最终分块文本
+ 
